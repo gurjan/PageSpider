@@ -9,7 +9,7 @@ def load_urls_from_file(file_path: str):
     # The code needed to read the text file with urls in it
     try:
         with open(file_path) as f:
-            content = f.readline()
+            content = f.readlines()
             return content
     except FileNotFoundError:
         print("the file " + file_path + "could not be found")
